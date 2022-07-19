@@ -464,9 +464,9 @@ p {
   transition: var(--anim-slow);
 }
 
-/* Peculiarities section */
+/* About section */
 
-.pecul-item {
+.about-container__img {
   display: flex;
   align-items: center;
   width: 270px;
@@ -478,15 +478,11 @@ p {
   align-items: center;
 }
 
-.pecul-list {
-  display: flex;
-}
-
-.peculiarities {
+.about {
   padding-top: 94px;
 }
 
-.container-peculiarities-text {
+.about-div {
   padding-top: 30px;
 }
 
@@ -500,7 +496,7 @@ p {
   margin-top: 25px;
 }
 
-.about-p {
+.about-text {
   font-family: 'Roboto';
   font-size: 14px;
   line-height: 1.71;
@@ -512,12 +508,12 @@ p {
 .about-container {
   display: flex;
 }
-.list .about-item {
+.list .about-container__item {
   margin-right: 30px;
   width: 270px;
 }
 
-.list .about-item:nth-child(4n) {
+.list .about-container__item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -528,7 +524,7 @@ p {
   padding-bottom: 94px;
 }
 
-.services-h2 {
+.title_h2 {
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 36px;
@@ -547,10 +543,10 @@ p {
   margin-right: 30px;
 }
 
-.services-img-div {
+.services-item__img {
   position: relative;
 }
-.services-img {
+.services-item__svg {
   display: block;
 }
 
