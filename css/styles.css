@@ -591,17 +591,17 @@ p {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.list-icon {
+.team-list-icon {
   display: flex;
   margin-top: 16px;
   align-items: center;
   justify-content: center;
 }
-.team-item-icon:not(:last-child) {
+.team-list-icon__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.team-icon-a {
+.team-list-icon__img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -612,18 +612,18 @@ p {
   transition: var(--anim-slow);
 }
 
-.team-icon-a:hover,
-.team-icon-a:focus {
+.team-list-icon__img:hover,
+.team-list-icon__img:focus {
   background-color: #2196f3;
   color: white;
 }
-.team-icon-svg {
+.team-list-icon__svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
 
-.team-h3 {
+.team-item__name {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
@@ -632,7 +632,7 @@ p {
   color: #212121;
   text-align: center;
 }
-.team-p {
+.team-item__job {
   font-family: 'Roboto';
   font-size: 16px;
   line-height: 1.18;
@@ -774,10 +774,10 @@ p {
   display: flex;
   margin-top: 50px;
 }
-.customers-item:not(:last-child) {
+.customers-list_item:not(:last-child) {
   margin-right: 30px;
 }
-.customers-icon-button {
+.customers-list_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -788,8 +788,8 @@ p {
   color: #afb1b8;
   transition: color var(--anim-slow), border var(--anim-slow);
 }
-.customers-icon-button:hover,
-.customers-icon-button:focus {
+.customers-list_button:hover,
+.customers-list_button:focus {
   border: 1px solid #2196f3;
   color: #2196f3;
 }
