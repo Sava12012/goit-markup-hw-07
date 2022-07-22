@@ -8,8 +8,10 @@
     margin-top: 50px;
 }
 
-.customers-list_item:not(:last-child) {
+.customers-list_item {
+    &:not(:last-child) {
     margin-right: 30px;
+    }
 }
 
 .customers-list_button {

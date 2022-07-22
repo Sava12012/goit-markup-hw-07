@@ -10,6 +10,9 @@
   --header-color: #212121;
   --label-color: #757575;
   --border-checkbox: #2a2a2a;
+  --logo-color:#f5f4fa;
+  --footer-backgroung:#2f303a;
+  --modal-form:rgba(33, 33, 33, 0.2);
   --anim-slow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -216,11 +219,32 @@ p {
   color: var(--acent-color);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity var(--anim-slow);
+  transition: opacity var(--anim-slow);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.3);
+          transform: translate(-50%, -50%) scale(0.3);
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -284,7 +308,7 @@ p {
 }
 
 .hero {
-  background-color: #2f303a;
+  background-color: var(--footer-backgroung);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -306,28 +330,6 @@ p {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  -webkit-transition: opacity var(--anim-slow);
-  transition: opacity var(--anim-slow);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.3);
-          transform: translate(-50%, -50%) scale(0.3);
 }
 
 .modal {
@@ -354,7 +356,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  color: rgba(33, 33, 33, 0.2);
+  color: var(--modal-form);
 }
 
 .modal-text {
@@ -380,6 +382,14 @@ p {
 .modal-field:first-child {
   margin-top: 0;
 }
+.modal-field input {
+  padding-left: 36px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.modal-field textarea {
+  padding: 12px 16px;
+}
 
 .form-label {
   color: var(--label-color);
@@ -402,7 +412,6 @@ p {
 
 .form-checkbox-agreement {
   margin-left: 4px;
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.46;
   letter-spacing: 0.03em;
@@ -475,12 +484,6 @@ p {
   transition: var(--anim-slow);
 }
 
-.modal-field input {
-  padding-left: 36px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-}
-
 .form-icon-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,10 +510,6 @@ p {
   background-origin: content-box;
   -webkit-transition: var(--anim-slow);
   transition: var(--anim-slow);
-}
-
-.modal-field textarea {
-  padding: 12px 16px;
 }
 
 .modal-checkbox {
@@ -910,11 +909,16 @@ p {
 
 .footer {
   background-color: #2f303a;
-}
-
-.footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .logo {
+  font-family: "Raleway";
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--logo-color);
 }
 
 .footer-adress-all {
@@ -923,26 +927,20 @@ p {
   display: flex;
 }
 
-.footer .logo {
-  font-family: "Raleway";
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: #f5f4fa;
-}
-
 .footer .span {
   color: var(--acent-color);
 }
 
 .footer .address {
   font-weight: 400;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.footer-address {
+  margin-top: 20px;
 }
 
 .footer .contact {
@@ -960,10 +958,6 @@ p {
   color: var(--acent-color);
 }
 
-.footer-address {
-  margin-top: 20px;
-}
-
 .footer-address-title {
   margin-bottom: 9px;
 }
@@ -974,18 +968,16 @@ p {
 }
 
 .footer-h2 {
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
   margin-left: 156px;
 }
 
 .footer-newsletter {
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -1018,7 +1010,7 @@ p {
   padding-left: 16px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #2f303a;
+  background-color: var(--footer-backgroung);
   color: var(--white-color);
 }
 
@@ -1049,7 +1041,6 @@ p {
   transition: var(--anim-slow);
   cursor: pointer;
   border-radius: 4px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
