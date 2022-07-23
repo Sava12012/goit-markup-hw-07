@@ -10,7 +10,7 @@
     border-bottom-color: var(--border-bottom-color);
 
         & .header-logo {
-                font-family: 'Raleway';
+                font-family: var(--secondary-font);
                 font-size: 26px;
                 line-height: 1.19;
                 letter-spacing: 0.03em;
