@@ -98,6 +98,11 @@
 }
 
 .form-input {
+    &:focus{
+            outline: var(--acent-color);
+            border: 1px solid var(--secondary-color);
+            transition: var(--anim-slow);
+        }
     width: 448px;
     height: 40px;
     cursor: pointer;
@@ -107,6 +112,11 @@
 }
 
 .form-textarea {
+        &:focus {
+            outline: var(--acent-color);
+            border: 1px solid var(--secondary-color);
+            transition: var(--anim-slow);
+        }
     display: block;
     resize: none;
     height: 120px;
@@ -118,13 +128,6 @@
 .modal_icon:focus-within .form-icon {
     fill: var(--acent-color);
     outline: var(--acent-color);
-    transition: var(--anim-slow);
-}
-
-.form-input:focus,
-.form-textarea:focus {
-    outline: var(--acent-color);
-    border: 1px solid var(--secondary-color);
     transition: var(--anim-slow);
 }
 

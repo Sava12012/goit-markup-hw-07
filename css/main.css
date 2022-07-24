@@ -461,6 +461,12 @@ p {
   -webkit-transition: var(--anim-slow);
   transition: var(--anim-slow);
 }
+.form-input:focus {
+  outline: var(--acent-color);
+  border: 1px solid var(--secondary-color);
+  -webkit-transition: var(--anim-slow);
+  transition: var(--anim-slow);
+}
 
 .form-textarea {
   display: block;
@@ -470,18 +476,16 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-
-.modal_icon:focus-within .form-icon {
-  fill: var(--acent-color);
+.form-textarea:focus {
   outline: var(--acent-color);
+  border: 1px solid var(--secondary-color);
   -webkit-transition: var(--anim-slow);
   transition: var(--anim-slow);
 }
 
-.form-input:focus,
-.form-textarea:focus {
+.modal_icon:focus-within .form-icon {
+  fill: var(--acent-color);
   outline: var(--acent-color);
-  border: 1px solid var(--secondary-color);
   -webkit-transition: var(--anim-slow);
   transition: var(--anim-slow);
 }
@@ -798,6 +802,10 @@ p {
   -webkit-transition: var(--anim-slow);
   transition: var(--anim-slow);
 }
+.pictures-item:hover, .pictures-item:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .pictures-item:nth-child(3n) {
   margin-right: 0;
@@ -831,9 +839,7 @@ p {
 .card-wrap {
   display: block;
 }
-
-.card-wrap:hover .pictures-desc,
-.card-wrap:focus .pictures-desc {
+.card-wrap:hover .pictures-desc, .card-wrap:focus .pictures-desc {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -842,12 +848,6 @@ p {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
-}
-
-.pictures-item:hover,
-.pictures-item:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .pictures-img {

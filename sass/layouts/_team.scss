@@ -16,7 +16,7 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-color);
-
+    
     &:nth-child(4n) {
             margin-right: 0px;
         }
@@ -56,8 +56,6 @@
     color: var(--team-list-color);
     transition: var(--anim-slow);
 }
-
-
 
 .team-list-icon__svg {
     width: 20px;
